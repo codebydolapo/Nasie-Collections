@@ -1,0 +1,10 @@
+.container{
+	width: 100vw;
+	height: 100vh;
+	overflow-x: hidden;
+	scroll-behaviour: smooth;
+}
+
+.container::-webkit-scrollbar{
+	display: none;
+}

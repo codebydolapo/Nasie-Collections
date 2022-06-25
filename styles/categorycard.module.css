@@ -1,0 +1,35 @@
+.categoryDiv{
+	width: 30%;
+	height: 210px;
+	color: white;
+	margin: 10px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 10px;
+	background: black;
+	padding-bottom: 5px;
+	/* border: 1px solid black; */
+}
+
+.categoryDiv:hover{
+	transform: scale(1.05);
+}
+
+.categoryImage{
+	width: 100%;
+	height: auto;
+	border-radius: inherit;
+	transition: all 500ms ease;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.categoryHeader{
+	font-size: 18px;
+	color: white;
+	font-weight: 500;
+}
+
