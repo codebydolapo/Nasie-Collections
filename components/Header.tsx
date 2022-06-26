@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "../styles/header.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DataBucket } from "./StateProvider";
 import {
   line1,
@@ -13,31 +13,45 @@ import {
 //THE IMPORT ABOVE CONTAINS ALL THE STATES FOR THE HAMBURGER ICON COLLAPSIBLE ANIMATION
 
 function Header() {
-  const [, dispatch] = DataBucket();
-  const [burger, setBurger] = useState(false);
+  const [{ menuHamburgerFlag, menuActiveFlag }, dispatch] = DataBucket();
+  //const [burger, setBurger] = useState(false);
 
   const [lineStyle1, setLineStyle1] = useState(linePassive);
   const [lineStyle2, setLineStyle2] = useState(linePassive);
   const [lineStyle3, setLineStyle3] = useState(linePassive);
 
   function menu() {
-    if (!burger) {
+    if (menuActiveFlag === false) {
       setLineStyle1(line1);
       setLineStyle2(line2);
       setLineStyle3(line3);
-      setBurger(true);
+      dispatch({
+        type: "MENU_HAMBURGER",
+        menuHamburgerFlag: true,
+      });
       dispatch({
         type: "MENU_ACTIVE",
         menuActive: menuActiveStyle,
+      });
+      dispatch({
+        type: "MENU_ACTIVE_FLAG",
+        menuActiveFlag: true,
       });
     } else {
       setLineStyle1(linePassive);
       setLineStyle2(linePassive);
       setLineStyle3(linePassive);
-      setBurger(false);
+      dispatch({
+        type: "MENU_HAMBURGER",
+        menuHamburgerFlag: false,
+      });
       dispatch({
         type: "MENU_INACTIVE",
         menuActive: menuInactiveStyle,
+      });
+      dispatch({
+        type: "MENU_ACTIVE_FLAG",
+        menuActiveFlag: false,
       });
     }
   }

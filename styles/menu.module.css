@@ -1,5 +1,5 @@
 .navs{
-	height: 45%;
+	height: 100%;
 	width: 100%;
 	/* border:1px solid red; */
 	display: flex;
@@ -10,53 +10,16 @@
 
 .navs > h1{
 	color: white;
-	width: 150px;
+	width: 100%;
+	text-align: center;
 	font-size: 20px;
 	font-weight: bolder;
 	/* border: 1px solid white; */
 	cursor: pointer;
+	/* color: purple; */
 }
 
 .navs> h1:hover{
 	transform: scale(1.02);
 }
-
-.loginDiv{
-	height: 45%;
-	width: 100%;
-	/* border: 1px solid white; */
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	flex-direction: column;
-	padding: 30px 0;
-}
-
-.loginDiv > h1{
-	color: white;
-	height: 30px;
-	/* border: 2px solid white; */
-	width: 150px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	/* background: green; */
-	border-radius: 10px;
-	cursor: pointer;
-}
-
-.loginDiv > h1:hover{
-	transform: scale(1.02);
-}
-
-
-
-
-
-
-
-
-
-
-
 

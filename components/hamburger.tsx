@@ -29,10 +29,11 @@ export const linePassive = {
 };
 
 export const menuActiveStyle = {
-  width: "30vw",
-  height: "100vh",
+  width: "300px",
+  height: "calc(100vh- 70px)",
   position: "fixed",
   right: 0,
+  bottom: 0,
   background: "black",
   zIndex: 2,
   display: "flex",
@@ -40,12 +41,12 @@ export const menuActiveStyle = {
   alignItems: "center",
   flexDirection: "column",
   transition: "all 500ms ease",
-  // border: '1px solid white'
+  //border: '1px solid white'
 };
 
 export const menuInactiveStyle = {
-  width: "30vw",
-  height: "100vh",
+  width: "300px",
+  height: "calc(100vh - 70px)",
   position: "fixed",
   background: "black",
   zIndex: 2,
@@ -53,6 +54,7 @@ export const menuInactiveStyle = {
   justifyContent: "center",
   alignItems: "center",
   flexDirection: "column",
-  right: "-30vw",
+  right: "-300px",
+  bottom: 0,
   transition: "all 500ms ease",
 };

@@ -48,10 +48,112 @@
 }
 
 
+@media only screen and (max-width: 600px){
+	
+	.landingMain{
+	height: calc(100vh - 70px);
+	/* height: 100vh; */
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	background: url('/images/cover2.jpg') no-repeat center center fixed;
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	filter: blur(50%);
+	margin-top: 70px;
+}
+
+.landingMessage{
+	width: 400px;
+	height: 300px;
+	/* border: 1px solid white; */
+	margin-bottom: 20px;
+	margin-left: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.get{
+	font-size: 45px;
+	color: white;
+	font-weight: bolder;
+}
+
+.lorem{
+	font-size: 15px;
+	color: white;
+	font-weight: lighter;
+}
+
+.landingMessage > button{
+	width: 140px;
+	height: 35px;
+	color: white;
+	background-color: rgba(33, 33, 255);
+	margin-top: 20px;
+	border-radius: 5px;
+}
+	
+}
 
 
+@media only screen and (max-width: 450px){
+	
+	.landingMain{
+	height: calc(100vh - 70px);
+	/* height: 100vh; */
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+	background: url('/images/cover2.jpg') no-repeat center center fixed;
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	filter: blur(50%);
+	margin-top: 70px;
+}
 
+.landingMessage{
+	width: 90%;
+	height: auto;
+	/* border: 1px solid white; */
+	margin-bottom: 20px;
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
 
+.get{
+	font-size: 40px;
+	color: white;
+	font-weight: bolder;
+}
+
+.lorem{
+	font-size: 14px;
+	color: white;
+	font-weight: lighter;
+}
+
+.landingMessage > button{
+	width: 140px;
+	height: 35px;
+	color: white;
+	background-color: rgba(33, 33, 255);
+	margin-top: 20px;
+	border-radius: 5px;
+}
+	
+}
 
 
 

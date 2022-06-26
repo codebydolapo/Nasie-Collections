@@ -6,7 +6,9 @@ export const initialState = {
   menuActive: menuInactiveStyle,
   posts: [],
   categories: [],
-  filteredPosts: []
+  filteredPosts: [],
+  menuHamburgerFlag: false,
+  menuActiveFlag: false,
 };
 
 export default function reducer(state, action) {
@@ -30,27 +32,40 @@ export default function reducer(state, action) {
         ...state,
         posts: action.posts,
       };
-	  
-	  case "FILTERED_ID":
+
+    case "FILTERED_ID":
       return {
         ...state,
         filteredId: action.filteredId,
       };
-	  
-	case "CATEGORIES":
+
+    case "FILTERED_POSTS":
+      return {
+        ...state,
+        filteredPosts: action.filteredPosts,
+      };
+
+    case "CATEGORIES":
       return {
         ...state,
         categories: action.categories,
       };
+
+    case "MENU_HAMBURGER":
+      return {
+        ...state,
+        menuHamburgerFlag: action.menuHamburgerFlag,
+      };
+
+    case "MENU_ACTIVE_FLAG":
+      return {
+        ...state,
+        menuActiveFlag: action.menuActiveFlag,
+      };
+
+    default:
+      return {
+        ...state,
+      };
   }
 }
-
-
-
-
-
-
-
-
-
-
