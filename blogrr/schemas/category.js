@@ -17,6 +17,15 @@ export default {
       name: 'image',
       title: 'Image',
       type: 'image',
-	}
+	},
+	{
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
+    },
   ],
 }

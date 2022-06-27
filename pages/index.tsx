@@ -5,6 +5,7 @@ import styles from "../styles/index.module.css";
 import Header from "../components/Header";
 import Menu from "../components/Menu";
 import Landing from "../components/Landing";
+import Footer from "../components/Footer";
 import { useEffect } from "react";
 //import Posts from '../components/Posts'
 import Top from "../components/Top";
@@ -47,6 +48,7 @@ const Home: NextPage = ({ categories, posts }: Props) => {
       <Landing />
       <CategoryMain categories={categories} posts={posts} />
       <Top />
+      <Footer />
     </div>
   );
 };
@@ -57,6 +59,9 @@ export async function getServerSideProps() {
   const categoryQuery = `*[_type == 'category']{
 		title,
 		image,
+		slug{
+			current
+		},
 		_id
 	}`;
 

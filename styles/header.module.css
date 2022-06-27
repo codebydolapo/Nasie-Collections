@@ -7,7 +7,7 @@
 	align-items: center;
 	padding: 0px 20px;
 	position: absolute;
-	z-index: 2;
+	z-index: 5;
 }
 
 .left{
@@ -61,7 +61,7 @@
 	align-items: center;
 	padding: 0px 10px;
 	position: absolute;
-	z-index: 2;
+	z-index: 5;
 }
 
 .left{

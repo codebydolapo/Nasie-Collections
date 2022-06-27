@@ -1,10 +1,10 @@
 import styles from "../styles/categorycard.module.css";
-//import Link from "next/link";
+import Link from "next/link";
 import { urlFor } from "../sanity";
 import { DataBucket } from "../components/StateProvider";
 //import { findPosts } from './reducer';
 
-function CategoryCard({ title, image }) {
+function CategoryCard({ title, image, slug }) {
   const [{ categories, posts }, dispatch] = DataBucket();
 
   //THIS FUNCTION FILTERS THE CATEGORY ARRAY AND PULLS OUT THE ID OF THE CATEGORY CLICKED.
@@ -31,12 +31,12 @@ function CategoryCard({ title, image }) {
   }
 
   return (
-    //<Link href = '/' >
+    <Link href = '/posts/slug' >
     <div className={styles.categoryDiv} onClick={handleClick}>
       <img src={urlFor(image).url()} alt="" className={styles.categoryImage} />
       <h1 className={styles.categoryHeader}>{title}</h1>
     </div>
-    //</Link>
+    </Link>
   );
 }
 
