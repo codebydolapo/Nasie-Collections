@@ -12,7 +12,9 @@
 	background: black;
 	padding-bottom: 5px;
 	transition: all ease 500ms;
+	border-bottom: 5px solid red;
 	/* border: 1px solid black; */
+	box-shadow: 1px 1px 10px black;
 }
 
 .categoryDiv:hover{
@@ -53,6 +55,8 @@
 	padding-bottom: 10px;
 	transition: all ease 500ms;
 	/* border: 1px solid black; */
+	border-bottom: 5px solid red;
+	box-shadow: 1px 1px 10px black;
 }
 
 .categoryDiv:hover{

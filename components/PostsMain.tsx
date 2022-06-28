@@ -1,12 +1,13 @@
 import styles from "../styles/postsmain.module.css";
+import PostCard from './PostCard'
 //import CategoryCard from "./CategoryCard";
 
-export default function PostsMain() {
+export default function PostsMain({posts}) {
 
   return (
-    <div className={styles.categoryMain} id="postsMain">
+    <div className={styles.postsMain}>
       <div className={styles.banner}>
-        <h1>Categories</h1>
+        <h1>Posts</h1>
         <div className={styles.searchDiv}>
           <div className={styles.searchBar}>
             <input type="text" />
@@ -14,14 +15,13 @@ export default function PostsMain() {
           </div>
         </div>
       </div>
-      {/* {categories.map((category) => (
-        <CategoryCard
-          key={category.image.asset._ref}
-          title={category.title}
-          image={category.image.asset._ref}
-          slug={category.slug.current}
+      {posts.map((post) => (
+        <PostCard
+          key={post._id}
+          title={post.title}
+          image={post.mainImage.asset._ref}
         />
-      ))} */}
+      ))}
     </div>
   );
 }

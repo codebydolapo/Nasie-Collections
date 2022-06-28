@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import styles from "C:/next-js-blog/blogr/styles/posts.module.css";
 import Head from "next/head";
 import Header from "C:/next-js-blog/blogr/components/Header";
 import Menu from "C:/next-js-blog/blogr/components/Menu";
@@ -12,13 +13,13 @@ const Posts: NextPage = ({ posts }) => {
   console.log(filteredPosts);
 
   return (
-    <div className={""}>
+    <div className={styles.posts}>
       <Head>
         <title>Blogr</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
-      <PostsMain/>
+      <Header/>
+      <PostsMain posts = {posts}/>
       <Menu />
     </div>
   );
@@ -53,7 +54,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }) => {
   const query = `*[_type == 'post' && references($posts_id)]{
 		title,
-		image,
+		mainImage,
 		slug{
 			current
 		},

@@ -21,7 +21,8 @@ export default function CategoryMain({ categories }) {
           key={category.image.asset._ref}
           title={category.title}
           image={category.image.asset._ref}
-		  slug = {category.slug.current}
+          //slug = {category.slug.current}
+          identifier = {category._id}
         />
       ))}
     </div>

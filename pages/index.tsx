@@ -85,6 +85,16 @@ export async function getServerSideProps() {
   const categories = await sanityClient.fetch(categoryQuery);
   const posts = await sanityClient.fetch(postQuery);
 
+  // identifier = posts.forEach((post)=>{
+  //   post.filter((category) => {
+  //     return category.title === title;
+  //   });
+  //   let filteredId = filteredCategory[0]._id;
+  //   let filteredPosts = posts.filter((post) => {
+  //     return post.categories[0]._ref === filteredId;
+  //   });
+  // })
+
   return {
     props: {
       categories: categories,
