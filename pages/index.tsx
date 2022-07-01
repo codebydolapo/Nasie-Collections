@@ -76,7 +76,9 @@ export async function getServerSideProps() {
 		},
 		description,
 		mainimage,
-		slug
+		slug{
+      current
+    }
 	}`;
 
   //THE REF OF A POST AND THE ID OF A CATEGORY ARE THE SAME.

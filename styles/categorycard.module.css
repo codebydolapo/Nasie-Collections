@@ -1,18 +1,18 @@
 .categoryDiv{
-	width: 300px;
-	height: 210px;
+	width: 230px;
+	height: 160px;
 	color: white;
 	margin: 10px;
-	margin-top: 30px;
+	/* margin-top: 15px; */
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
 	border-radius: 10px;
-	background: black;
+	/* background: black; */
 	padding-bottom: 5px;
 	transition: all ease 500ms;
-	border-bottom: 5px solid red;
+	border-bottom: 2px solid black;
 	/* border: 1px solid black; */
 	box-shadow: 1px 1px 10px black;
 }
@@ -31,52 +31,7 @@
 }
 
 .categoryHeader{
-	font-size: 18px;
-	color: white;
+	font-size: 15px;
+	color: black;
 	font-weight: 500;
 }
-
-
-
-@media only screen and (max-width: 500px){
-	
-	.categoryDiv{
-	width: 90vw;
-	height: 64vw;
-	color: white;
-	margin: 10px;
-	margin-top: 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: column;
-	border-radius: 10px;
-	background: black;
-	padding-bottom: 10px;
-	transition: all ease 500ms;
-	/* border: 1px solid black; */
-	border-bottom: 5px solid red;
-	box-shadow: 1px 1px 10px black;
-}
-
-.categoryDiv:hover{
-	transform: scale(1.05);
-}
-
-.categoryImage{
-	width: 100%;
-	height: auto;
-	border-radius: inherit;
-	transition: all 500ms ease;
-	border-bottom-left-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-.categoryHeader{
-	font-size: 20px;
-	color: white;
-	font-weight: 500;
-}
-	
-}
-

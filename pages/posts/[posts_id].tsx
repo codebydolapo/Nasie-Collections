@@ -5,12 +5,18 @@ import Header from "C:/next-js-blog/blogr/components/Header";
 import Menu from "C:/next-js-blog/blogr/components/Menu";
 import PostsMain from "C:/next-js-blog/blogr/components/PostsMain";
 import { sanityClient } from "C:/next-js-blog/blogr/sanity.js";
-import { DataBucket } from "C:/next-js-blog/blogr/components/StateProvider.js";
+// import { DataBucket } from "C:/next-js-blog/blogr/components/StateProvider.js";
+import { urlFor } from "C:/next-js-blog/blogr/sanity.js";
 
-const Posts: NextPage = ({ posts }) => {
+
+
+interface Props{
+  posts: any,
+}
+
+const Posts: any = ({ posts }: Props) => {
   console.log(posts);
-  const [{ filteredPosts }] = DataBucket();
-  console.log(filteredPosts);
+  
 
   return (
     <div className={styles.posts}>
@@ -19,7 +25,7 @@ const Posts: NextPage = ({ posts }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <PostsMain posts = {posts}/>
+      <PostsMain posts = {posts} />
       <Menu />
     </div>
   );
@@ -28,13 +34,24 @@ const Posts: NextPage = ({ posts }) => {
 export default Posts;
 
 export const getStaticPaths = async () => {
+  //THIS BIT OF CODE HERE QUERIES THE CMS FOR THE LIST OF ALL THE CATEGORIES
   const categoryQuery = `*[_type == 'category']{
-		_id
+    _id,
+    slug{
+      current
+    }
 	}`;
 
   const category = await sanityClient.fetch(categoryQuery);
 
-  const paths = category.map((categories) => {
+  interface Categories{
+    _id: string,
+    slug: any
+  }
+
+  //THIS BIT RECIEVES AN ARRAY CONTAINING ALL THE CATEGORIES
+  //IT THEN USES THE PARAMETER I SPECIFIED IN THOSE CATEGORIES (IN THIS CASE, THE ), TO CREATE A LIST OF ALL POSSIBLE ORWARD SLASHES.
+  const paths = category.map((categories: Categories) => {
     return {
       params: {
         posts_id: categories._id,
@@ -51,8 +68,10 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async ({ params }) => {
-  const query = `*[_type == 'post' && references($posts_id)]{
+
+
+export const getStaticProps = async ({ params }: any) => {
+  const query = `*[_type == 'post' && categories[0]._ref == $posts_id]{
 		title,
 		mainImage,
 		slug{
@@ -62,10 +81,13 @@ export const getStaticProps = async ({ params }) => {
 	}`;
 
   //975b3af3-14e2-4d74-8e76-ad973b043140
+
+  
   const posts = await sanityClient.fetch(query, {
     posts_id: params?.posts_id.toString(),
   });
-
+  
+  console.log(params)
   if (!posts) {
     return {
       notFound: true,

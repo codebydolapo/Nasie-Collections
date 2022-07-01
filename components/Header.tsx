@@ -62,7 +62,7 @@ function Header() {
         <Link href="/">
           <img src="/images/globe.png" alt="" className={styles.logo} />
         </Link>
-        <h1 className={styles.title}>blogr</h1>
+        <h1 className={styles.title}>Blogr</h1>
       </div>
       <div className={styles.hamburger} onClick={menu}>
         <div style={lineStyle1}></div>

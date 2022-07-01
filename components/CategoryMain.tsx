@@ -1,8 +1,8 @@
 import styles from "../styles/categorymain.module.css";
-import Image from "next/image";
+import Link from "next/link";
 import CategoryCard from "./CategoryCard";
 
-export default function CategoryMain({ categories }) {
+export default function CategoryMain({ categories }: any) {
   //console.log(categories);
 
   return (
@@ -11,20 +11,38 @@ export default function CategoryMain({ categories }) {
         <h1>Categories</h1>
         <div className={styles.searchDiv}>
           <div className={styles.searchBar}>
-            <input type="text" />
+            <input
+              type="text"
+              placeholder="Search for posts from any category"
+            />
             <button>Search</button>
           </div>
         </div>
       </div>
-      {categories.map((category) => (
-        <CategoryCard
-          key={category.image.asset._ref}
-          title={category.title}
-          image={category.image.asset._ref}
-          //slug = {category.slug.current}
-          identifier = {category._id}
-        />
-      ))}
+      <div className={styles.categoryContainer}>
+        <div className={styles.left}>
+          {categories.map((category: any) => (
+            <CategoryCard
+              key={category.image.asset._ref}
+              title={category.title}
+              image={category.image.asset._ref}
+              slug = {category.slug.current}
+              identifier={category._id}
+            />
+          ))}
+        </div>
+        <div className={styles.right}>
+          {categories.map((category: any) => {
+            return (
+              <Link href = {`/posts/${category.identifier_id}`}>
+                <div>
+                  <h1>{category.title}</h1>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 }

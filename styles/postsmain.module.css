@@ -4,13 +4,12 @@
   width: 100%;
   background: inherit;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
   overflow: scroll;
   padding-top: 70px;
-  background: whitesmoke;
+  background: white;
 }
 
 .postsMain::-webkit-scrollbar {
@@ -19,38 +18,43 @@
 
 .banner {
   width: 100%;
-  height: 120px;
+  height: 20%;
   background: url("/images/banner.jpg") no-repeat center center fixed;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  /* border: 1px solid; */
-  margin-bottom: 20px;
+  background-color: purple;
+  background-blend-mode:color-burn;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .banner > h1 {
-  width: 100%;
-  font-size: 30px;
+  width: auto;
+  font-size: 50px;
   text-align: center;
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   font-weight: bolder;
   color: white;
+  /* border: 1px solid black; */
+  padding: 0 20px;
 }
 
 .searchDiv {
-  width: 100%;
+  width: 60%;
   height: 35px;
   /* border: 1px solid black; */
-  margin: 10px 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  margin-right: 20px;
   /* background: white; */
 }
 
 .searchBar {
-  width: 45%;
+  width: 80%;
   height: 100%;
   /* border: 1px solid black; */
   border-radius: 10px;
@@ -73,4 +77,62 @@
 .searchBar > button {
   font-size: 15px;
   font-weight: 500;
+}
+
+.postContainer{
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.postContainer::-webkit-scrollbar{
+  display: none;
+}
+
+.left{
+  width: 76%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.right{
+  width: 22%;
+  height: 70vh;
+  /* border: 1px solid black; */
+  /* border-radius: 10px; */
+  /* box-shadow: 1px 1px 10px black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* border-right: 5px solid blue; */
+}
+
+.right::-webkit-scrollbar{
+  display: none;
+}
+
+.right > div{
+  height: 40px;
+  min-height: 40px;
+  width: 100%;
+  /* border: 1px solid black; */
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.right > div:hover{
+  border-left: 5px solid blue;
 }
