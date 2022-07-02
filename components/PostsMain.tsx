@@ -3,11 +3,15 @@ import PostCard from "./Postcard";
 //import { urlFor } from 'C:/next-js-blog/blogr/sanity.js';
 //import CategoryCard from "./CategoryCard";
 
-interface Props {
-  posts: any;
-}
+// interface Props {
+//   posts: {
+//     title: string,
+//     image: string,
+//     identifier: string,
+// }
+// }
 
-export default function PostsMain({ posts }: Props) {
+export default function PostsMain({ posts }: any) {
   return (
     <div className={styles.postsMain}>
       <div className={styles.banner}>
@@ -27,6 +31,7 @@ export default function PostsMain({ posts }: Props) {
               title={post.title}
               image={post.mainImage.asset._ref}
               slug={post.slug.current}
+              identifier = {post.categories[0]._ref}
             />
           ))}
         </div>
@@ -34,7 +39,7 @@ export default function PostsMain({ posts }: Props) {
           {posts.map((post: any) => {
             return (
               <div>
-                <h1>{post.title}</h1>
+                <h1 key = {post.title}>{post.title}</h1>
               </div>
             );
           })}

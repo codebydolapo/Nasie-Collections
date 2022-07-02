@@ -4,11 +4,13 @@ import Header from "C:/next-js-blog/blogr/components/Header";
 import Menu from "C:/next-js-blog/blogr/components/Menu";
 import { sanityClient, urlFor } from "C:/next-js-blog/blogr/sanity.js";
 import BlogPost from "C:/next-js-blog/blogr/components/BlogPost";
-import styles from 'post.module.css'
+import styles from "C:/next-js-blog/blogr/styles/post.module.css";
+import { POINT_CONVERSION_COMPRESSED } from "constants";
 
 //const filteredPosts = localStorage.getItem('filteredPosts')
 
-const Post: NextPage = (post) => {
+const Post: NextPage = (props) => {
+  console.log(props);
   return (
     <div className={styles.postMain}>
       <Head>
@@ -16,7 +18,7 @@ const Post: NextPage = (post) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <BlogPost post = {post}/>
+      {/* <BlogPost post={props.post} /> */}
       <Menu />
     </div>
   );
@@ -26,37 +28,35 @@ export default Post;
 
 export async function getStaticPaths() {
   const postQuery = `*[_type == 'post']{
-		_id,
 		slug{
 			current
 		}
   }`;
 
-  const post = await sanityClient.fetch(postQuery);
+  const posts = await sanityClient.fetch(postQuery);
 
-  const path = post.map((post: any) => {
+  const paths = posts.map((post: { slug: { current: string; }; })=>{
     return {
       params: {
-        post: post.slug.current,
+        blogpost: post.slug.current,
       },
     };
-  });
+  })
+  
+  
 
   return {
-    path,
+    paths,
     fallback: "blocking",
   };
 }
 
 export async function getStaticProps({ params }: any) {
-  const postQuery = `*[_type == 'post' && slug.current == $slug]`;
+  const postQuery = `*[_type == 'post' && slug.current == $post]`;
 
   const post = sanityClient.fetch(postQuery, {
-    slug: params?.post.toString(),
+    post: params?.blogpost
   });
-
-  //params?post.toString()
-  //975b3af3-14e2-4d74-8e76-ad973b043140
 
   if (!post) {
     return {

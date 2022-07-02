@@ -1,18 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/index.module.css";
 import Header from "../components/Header";
 import Menu from "../components/Menu";
 import Landing from "../components/Landing";
 import Footer from "../components/Footer";
-import { useEffect } from "react";
-//import Posts from '../components/Posts'
 import Top from "../components/Top";
 import CategoryMain from "../components/CategoryMain";
 import { sanityClient } from "../sanity";
 import { Category, Post } from "../types.d";
-import { DataBucket } from "../components/StateProvider";
 
 interface Props {
   categories: Category;
@@ -20,22 +16,8 @@ interface Props {
 }
 
 const Home: NextPage = ({ categories, posts }: Props) => {
-  //console.log(categories)
-
-  const [, dispatch] = DataBucket();
-
-  useEffect(() => {
-    dispatch({
-      type: "POSTS",
-      posts: posts,
-    });
-
-    dispatch({
-      type: "CATEGORIES",
-      categories: categories,
-    });
-  }, []);
-
+  console.log(categories)
+  console.log(posts)
   return (
     <div className={styles.container}>
       <Head>

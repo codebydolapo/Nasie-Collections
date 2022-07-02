@@ -5,16 +5,9 @@ import Header from "C:/next-js-blog/blogr/components/Header";
 import Menu from "C:/next-js-blog/blogr/components/Menu";
 import PostsMain from "C:/next-js-blog/blogr/components/PostsMain";
 import { sanityClient } from "C:/next-js-blog/blogr/sanity.js";
-// import { DataBucket } from "C:/next-js-blog/blogr/components/StateProvider.js";
-import { urlFor } from "C:/next-js-blog/blogr/sanity.js";
 
 
-
-interface Props{
-  posts: any,
-}
-
-const Posts: any = ({ posts }: Props) => {
+const BlogPosts: NextPage = ({ posts }: any) => {
   console.log(posts);
   
 
@@ -31,30 +24,26 @@ const Posts: any = ({ posts }: Props) => {
   );
 };
 
-export default Posts;
+export default BlogPosts;
 
-export const getStaticPaths = async () => {
+export async function getStaticPaths(){
   //THIS BIT OF CODE HERE QUERIES THE CMS FOR THE LIST OF ALL THE CATEGORIES
   const categoryQuery = `*[_type == 'category']{
     _id,
-    slug{
-      current
-    }
 	}`;
 
   const category = await sanityClient.fetch(categoryQuery);
 
   interface Categories{
     _id: string,
-    slug: any
   }
 
   //THIS BIT RECIEVES AN ARRAY CONTAINING ALL THE CATEGORIES
-  //IT THEN USES THE PARAMETER I SPECIFIED IN THOSE CATEGORIES (IN THIS CASE, THE ), TO CREATE A LIST OF ALL POSSIBLE ORWARD SLASHES.
+  //IT THEN USES THE PARAMETER I SPECIFIED IN THOSE CATEGORIES (IN THIS CASE, THE _ID), TO CREATE A LIST OF ALL POSSIBLE FORWARD SLASHES.
   const paths = category.map((categories: Categories) => {
     return {
       params: {
-        posts_id: categories._id,
+        posts_id: categories._id.toString()
       },
     };
   });
@@ -73,21 +62,22 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({ params }: any) => {
   const query = `*[_type == 'post' && categories[0]._ref == $posts_id]{
 		title,
-		mainImage,
+    mainImage,
+    categories,
 		slug{
 			current
 		},
 		_id
-	}`;
+	}`
 
   //975b3af3-14e2-4d74-8e76-ad973b043140
 
   
   const posts = await sanityClient.fetch(query, {
-    posts_id: params?.posts_id.toString(),
+    posts_id: params?.posts_id
   });
   
-  console.log(params)
+  //console.log(params)
   if (!posts) {
     return {
       notFound: true,
