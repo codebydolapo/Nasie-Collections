@@ -131,6 +131,7 @@
   justify-content: flex-start;
   align-items: center;
   padding-left: 10px;
+  cursor: pointer;
 }
 
 .right > div:hover{

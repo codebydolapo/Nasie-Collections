@@ -11,7 +11,7 @@ interface Props{
 
 function Postcard({ image, title, identifier, slug }: Props) {
   return (
-    <Link href={`/posts/post/${slug}`}>
+    <Link href={`/post/${slug}`}>
       <div className={styles.postCardMain}>
         <img src={urlFor(image).url()} alt="" className={styles.postImage} />
         <h1 className={styles.postHeader}>{title}</h1>

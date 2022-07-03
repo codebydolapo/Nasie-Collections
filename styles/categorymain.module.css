@@ -113,8 +113,8 @@
   width: 22%;
   height: 65vh;
   /* border: 1px solid black; */
-  /* border-radius: 10px; */
-  /* box-shadow: 1px 1px 10px black; */
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px black;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -141,7 +141,8 @@
   /* color: blue; */
   font-weight: 500;
   transition: all ease-in-out 200ms;
-  color: black;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 .right > div:hover{

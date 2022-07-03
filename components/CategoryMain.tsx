@@ -46,6 +46,7 @@ export default function CategoryMain({ categories }: any) {
           ))}
         </div>
         <div className={styles.right}>
+          <h1>categories</h1>
           {categories.map((category: any) => {
             return (
               <Link href = {`/posts/${category._id}`}>
