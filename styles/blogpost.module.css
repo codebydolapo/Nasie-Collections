@@ -84,14 +84,14 @@
 }
 
 .commentSection{
-    height: 400px;
+    height: auto;
     width: 80vw;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    border: 1px solid black;
-    margin-top: 40px;
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+    margin: 40px 0;
     border-radius: 10px;
 }
 
@@ -101,19 +101,20 @@
     background: green;
     padding-left: 10px;
     color: white;
-    border-top-right-radius: inherit;
-    border-top-left-radius: inherit;
+    /* border-top-right-radius: inherit;
+    border-top-left-radius: inherit; */
 }
 
 .form{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     height: 85%;
-    width: 80vw;
+    width: 100%;
     margin-top: 20px;
-    /* border: 1px solid black; */
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 
 .label{
@@ -129,14 +130,45 @@
 }
 
 .input{
-    width: 90%;
-    border: 1px solid black;
+    width: 80%;
+    height: 35px;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
     margin-left: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: 0;
+}
+
+.input:focus{
+    border: 0.5px solid green;
 }
 
 .textArea{
-    width: 90%;
-    border: 1px solid black;
+    width: 80%;
+    border: 0.5px solid rgba(0, 0, 0, 0.5);
     margin-left: 10px;
+    border-radius: 10px;
+    padding-left: 10px;
+    outline: 0;
 
+}
+
+.textArea:focus{
+    border: 0.5px solid green;
+}
+
+.commentSection >p{
+    margin: 10px;
+}
+
+.commentSection > button{
+    height: 30px;
+    width: 100px;
+    color: white;
+    background: green;
+    border: 0;
+    outline: 0;
+    margin: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
 }

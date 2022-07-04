@@ -1,6 +1,7 @@
 import styles from "../styles/blogpost.module.css";
 import { urlFor } from "../sanity";
 import PortableText from "react-portable-text";
+import { useForm, submitHandler } from "react-hook-form";
 
 interface Post {
   post: {
@@ -12,6 +13,7 @@ interface Post {
     author: {
       image: string;
     };
+    _id: string
     title: string;
     publishedAt: string;
     description: string;
@@ -19,7 +21,20 @@ interface Post {
   };
 }
 
+interface Form {
+  _id: string;
+  name: string;
+  email: string;
+  comment: string;
+}
+
 function Posts({ post }: Post) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Form>();
+
   return (
     <div className={styles.blogpost}>
       <div className={styles.banner}>
@@ -44,7 +59,7 @@ function Posts({ post }: Post) {
               className={styles.authorImage}
             />
             <h1>
-              Article By: <b>Bashorun Dolapo</b>
+              Article By: <b>Lorem Ipsum</b>
             </h1>
           </div>
           <div className={styles.postText}>
@@ -54,26 +69,51 @@ function Posts({ post }: Post) {
               content={post.body}
             />
           </div>
-          <div className  = {styles.commentSection}>
+          <div className={styles.commentSection}>
+            <p>Enjoyed this article?</p>
             <h1>Leave A Comment</h1>
-
+            <input
+              {...register("_id")}
+              type="hidden"
+              name="_id"
+              value={post._id}
+            />
             <form className={styles.form}>
-            <label className={styles.label}>
-              <span>Name:</span>
-              <input type="text" placeholder="Name" className = {styles.input}/>
-            </label>
+              <label className={styles.label}>
+                <span>Name:</span>
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className={styles.input}
+                  {...register("name", { required: true })}
+                />
+              </label>
 
-            <label className={styles.label}>
-              <span>Email:</span>
-              <input type="text" placeholder="example@mail.com" className = {styles.input}/>
-            </label>
+              <label className={styles.label}>
+                <span>Email:</span>
+                <input
+                  type="email"
+                  placeholder="example@mail.com"
+                  className={styles.input}
+                  {...register("email", { required: true })}
+                />
+              </label>
 
-            <label className={styles.label}>
-              <span>Comment:</span>
-              <textarea placeholder="Leave A Comment" rows={8} className = {styles.textArea}/>
-            </label>
-          </form>
-
+              <label className={styles.label}>
+                <span>Comment:</span>
+                <textarea
+                  placeholder="Leave A Comment"
+                  rows={8}
+                  className={styles.textArea}
+                  {...register("comment", {required: true})}
+                />
+              </label>
+              {/* THIS WILL RETURN AN ERROR IF THERE IS A PROBLEM WITH THE COMMENT. PROBABLY A MISSING INPUT FIELD OR SOMETHING */}
+              {errors.name && <p className = {styles.error}> Name cannot be blank</p>}
+              {errors.email && <p className = {styles.error}> Email cannot be blank</p>}
+              {errors.comment && <p className = {styles.error}> Name cannot be blank</p>}
+            </form>
+              <button>Submit</button>
           </div>
         </div>
       </div>
