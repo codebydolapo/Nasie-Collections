@@ -1,17 +1,36 @@
 import styles from "../styles/postsmain.module.css";
 import PostCard from "./Postcard";
+import Aside from "./Aside";
 //import { urlFor } from 'C:/next-js-blog/blogr/sanity.js';
-//import CategoryCard from "./CategoryCard";
 
-// interface Props {
-//   posts: {
-//     title: string,
-//     image: string,
-//     identifier: string,
-// }
-// }
+interface Post {
+  posts: {
+    _id: string;
+    title: string;
+    slug: {
+      current: string;
+    };
+    mainImage: {
+      asset: {
+        _ref: string;
+      };
+    };
+    categories: any,
+  };
+  _id: string;
+  title: string;
+  slug: {
+    current: string;
+  };
+  mainImage: {
+    asset: {
+      _ref: string;
+    };
+  };
+  categories: any;
+}
 
-export default function PostsMain({ posts }: any) {
+export default function PostsMain({ posts }: Post) {
   return (
     <div className={styles.postsMain}>
       <div className={styles.banner}>
@@ -25,24 +44,23 @@ export default function PostsMain({ posts }: any) {
       </div>
       <div className={styles.postContainer}>
         <div className={styles.left}>
-          {posts.map((post: any) => (
+          {posts.map((post: Post) => (
             <PostCard
               key={post._id}
               title={post.title}
               image={post.mainImage.asset._ref}
               slug={post.slug.current}
-              identifier = {post.categories[0]._ref}
+              identifier={post.categories[0]._ref}
             />
           ))}
         </div>
         <div className={styles.right}>
-          {posts.map((post: any) => {
-            return (
-              <div>
-                <h1 key = {post.title}>{post.title}</h1>
-              </div>
-            );
-          })}
+          <h1>Featured</h1>
+          <div className={styles.posts}>
+            {posts.map((post: { mainImage: string; title: string }) => {
+              return <Aside image={post.mainImage} title={post.title} />;
+            })}
+          </div>
         </div>
       </div>
     </div>

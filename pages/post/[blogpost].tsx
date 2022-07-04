@@ -17,7 +17,7 @@ const Post: NextPage = ({post}) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      {/* <BlogPost post={props.post} /> */}
+      <BlogPost post={post} />
       <Menu />
     </div>
   );

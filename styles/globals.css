@@ -1,3 +1,14 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Poppins:wght@100;200;300;500;600;700;800;900;1000&display=swap');
+
+*{
+    font-family: poppins, 'Franklin Gothic Medium', poppins, hubballi, 'Courier New', Courier, monospace;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}

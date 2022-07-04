@@ -57,7 +57,7 @@ export async function getServerSideProps() {
 			image
 		},
 		description,
-		mainimage,
+		mainImage,
 		slug{
       current
     }

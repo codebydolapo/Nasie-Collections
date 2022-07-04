@@ -1,5 +1,5 @@
 .landingMain{
-	height: calc(100vh - 70px);
+	height: calc(100vh - 50px);
 	/* height: 100vh; */
 	width: 100vw;
 	display: flex;
@@ -11,7 +11,7 @@
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	/* filter: blur(50%); */
-	margin-top: 70px;
+	margin-top: 50px;
 }
 
 .landingMessage{
