@@ -64,6 +64,7 @@
   align-items: center;
   padding: 0 10px;
   background: white;
+  border: 0;
 }
 
 .searchBar > input {
@@ -73,11 +74,17 @@
   border-radius: inherit;
   outline: 0;
   text-transform: capitalize;
+  border: 0;
 }
 
 .searchBar > button {
   font-size: 15px;
   font-weight: 500;
+  width: 70px;
+  border-radius: 10px;
+  border: 0;
+  background: green;
+  color: white;
 }
 
 .categoryContainer{
@@ -129,6 +136,9 @@
   border-radius: 10px;
   font-weight: bold;
   letter-spacing: 1px;
+  font-size: 18px;
+  z-index: 2;
+  display: none;
 }
 
 .posts{

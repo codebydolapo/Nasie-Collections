@@ -54,7 +54,10 @@ function Posts({ post }: Post) {
               content={post.body}
             />
           </div>
-          <form className={styles.form}>
+          <div className  = {styles.commentSection}>
+            <h1>Leave A Comment</h1>
+
+            <form className={styles.form}>
             <label className={styles.label}>
               <span>Name:</span>
               <input type="text" placeholder="Name" className = {styles.input}/>
@@ -70,6 +73,8 @@ function Posts({ post }: Post) {
               <textarea placeholder="Leave A Comment" rows={8} className = {styles.textArea}/>
             </label>
           </form>
+
+          </div>
         </div>
       </div>
     </div>

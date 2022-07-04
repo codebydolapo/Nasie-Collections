@@ -10,7 +10,7 @@
 	background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	/* filter: blur(50%); */
+	/* filter: grayscale(10%); */
 	margin-top: 50px;
 }
 
@@ -28,14 +28,14 @@
 
 .get{
 	font-size: 45px;
-	color: white;
+	color: rgb(255, 255, 255);
 	font-weight: 1000;
 }
 
 .lorem{
 	font-size: 15px;
 	color: white;
-	font-weight: lighter;
+	font-weight: 300;
 }
 
 .landingMessage > button{
@@ -45,6 +45,7 @@
 	background-color: rgb(9, 89, 238);
 	margin-top: 20px;
 	border-radius: 5px;
+	border: 0;
 }
 
 

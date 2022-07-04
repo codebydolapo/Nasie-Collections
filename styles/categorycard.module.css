@@ -9,13 +9,13 @@
 	align-items: center;
 	flex-direction: column;
 	border-radius: 10px;
-	/* background: black; */
+	/* background: whitesmoke; */
 	padding-bottom: 5px;
 	transition: all ease 500ms;
 	border-bottom: 2px solid black;
 	/* border: 1px solid black; */
 	box-shadow: 1px 1px 10px black;
-	background: black;
+	background: white;
 	cursor: pointer;
 }
 
