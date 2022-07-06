@@ -49,10 +49,59 @@
 	/* border: 1px solid white; */
 }
 
-/* :is(.line1, .line2, .line3){ */
-	/* width: 90%; */
-	/* height: 3px; */
-	/* background: white; */
-/* } */
+@media only screen and (max-width: 500px){
+
+	.header{
+	width: 100vw;
+	height: 50px;
+	background: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* padding: 0px 20px; */
+	position: absolute;
+	z-index: 5;
+}
+
+.left{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* border: 1px solid white; */
+	width: calc(100vw - 110px);
+	margin-left: 55px;
+
+}
+
+.logo{
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: none;
+}
+
+.title{
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+	margin-left: 10px;
+}
+
+.hamburger{
+	width: 30px;
+	height: 30px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	cursor: pointer;
+	margin-right: 20px;
+	/* border: 1px solid white; */
+}
 
 
+
+}

@@ -46,7 +46,7 @@ export default function CategoryMain({ categories, posts }: any) {
             />
           ))}
         </div>
-        <div className={styles.right}>
+        {/* <div className={styles.right}>
           <h1>Featured</h1>
           <div className={styles.posts}>
             <Aside image={posts[9].mainImage} title={posts[9].title} />
@@ -59,7 +59,7 @@ export default function CategoryMain({ categories, posts }: any) {
             <Aside image={posts[9].mainImage} title={posts[9].title} />
             <Aside image={posts[8].mainImage} title={posts[8].title} />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

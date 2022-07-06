@@ -161,7 +161,7 @@
     margin: 10px;
 }
 
-.commentSection > button{
+.commentSection > form > button{
     height: 30px;
     width: 100px;
     color: white;
@@ -171,4 +171,91 @@
     margin: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.commentDiv{
+    height: 350px;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0;
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+    border-radius: 10px;
+}
+
+.commentDiv > h1{
+    font-size: 30px;
+    height: 50px;
+    width: 100%;
+    background: green;
+    color: white;
+}
+
+.commentBody{
+    height: 270px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: inherit;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: scroll;
+}
+
+.commentBody::-webkit-scrollbar{
+    display: none
+}
+
+.comment{
+    height: 120px;
+    border-radius: 20px;
+    width: auto;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 30px;
+    padding-right: 100px;
+    margin: 10px 0;
+}
+
+.comment > h3{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.commenterName {
+    color: green;
+    font-weight: bold;
+}
+
+.emailTimelineDiv{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.email{
+    font-size: 13px;
+    color: green;
+    font-weight: 500;
+
+}
+
+.timeline{
+    font-size: 15px;
+    font-weight: 500;
+
+}
+
+.timeline > span{
+    color: green;
 }

@@ -54,14 +54,14 @@ export default function PostsMain({ posts }: Post) {
             />
           ))}
         </div>
-        <div className={styles.right}>
+        {/* <div className={styles.right}>
           <h1>Featured</h1>
           <div className={styles.posts}>
             {posts.map((post: { mainImage: string; title: string }) => {
               return <Aside image={post.mainImage} title={post.title} />;
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

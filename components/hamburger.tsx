@@ -29,7 +29,7 @@ export const linePassive = {
 };
 
 export const menuActiveStyle = {
-  width: "300px",
+  width: "250px",
   height: "calc(100vh- 50px)",
   position: "fixed",
   right: 0,
@@ -45,7 +45,7 @@ export const menuActiveStyle = {
 };
 
 export const menuInactiveStyle = {
-  width: "300px",
+  width: "250px",
   height: "calc(100vh - 50px)",
   position: "fixed",
   background: "black",

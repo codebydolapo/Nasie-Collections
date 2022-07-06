@@ -55,7 +55,25 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-  const postQuery = `*[_type == 'post' && slug.current == $blogpost]`;
+  const postQuery = `*[_type == 'post' && slug.current == $blogpost]{
+  _createdAt,
+  _id,
+  _rev,
+  _updatedAt,
+  'comments': *[
+    _type == 'comment' 
+    && post._ref == ^._id 
+    && approved == true
+  ],
+  author,
+  body,
+  categories,
+  description,
+  mainImage,
+  publishedAt,
+  slug,
+  title
+}`;
 
   const post = await sanityClient.fetch(postQuery, {
     blogpost: params.blogpost
