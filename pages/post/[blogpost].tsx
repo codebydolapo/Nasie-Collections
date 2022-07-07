@@ -9,7 +9,7 @@ import styles from "C:/next-js-blog/blogr/styles/post.module.css";
 //const filteredPosts = localStorage.getItem('filteredPosts')
 
 const Post: NextPage = ({post}) => {
-  console.log(post);
+  //console.log(post);
   return (
     <div className={styles.postMain}>
       <Head>

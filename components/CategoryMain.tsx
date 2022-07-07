@@ -46,20 +46,6 @@ export default function CategoryMain({ categories, posts }: any) {
             />
           ))}
         </div>
-        {/* <div className={styles.right}>
-          <h1>Featured</h1>
-          <div className={styles.posts}>
-            <Aside image={posts[9].mainImage} title={posts[9].title} />
-            <Aside image={posts[15].mainImage} title={posts[15].title} />
-            <Aside image={posts[2].mainImage} title={posts[2].title} />
-            <Aside image={posts[12].mainImage} title={posts[12].title} />
-            <Aside image={posts[5].mainImage} title={posts[5].title} />
-            <Aside image={posts[6].mainImage} title={posts[6].title} />
-            <Aside image={posts[7].mainImage} title={posts[7].title} />
-            <Aside image={posts[9].mainImage} title={posts[9].title} />
-            <Aside image={posts[8].mainImage} title={posts[8].title} />
-          </div>
-        </div> */}
       </div>
     </div>
   );

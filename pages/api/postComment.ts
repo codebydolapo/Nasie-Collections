@@ -39,4 +39,4 @@ export default async function postComment(
   }
 
   res.status(200).json({ message: 'Comment posted successfully' });
-}
+};

@@ -4,7 +4,6 @@ import styles from "../styles/index.module.css";
 import Header from "../components/Header";
 import Menu from "../components/Menu";
 import Landing from "../components/Landing";
-import Footer from "../components/Footer";
 import Top from "../components/Top";
 import CategoryMain from "../components/CategoryMain";
 import { sanityClient } from "../sanity";
@@ -16,8 +15,8 @@ interface Props {
 }
 
 const Home: NextPage = ({ categories, posts }: Props) => {
-  console.log(categories)
-  console.log(posts)
+  //console.log(categories)
+  //console.log(posts)
   return (
     <div className={styles.container}>
       <Head>
@@ -30,7 +29,6 @@ const Home: NextPage = ({ categories, posts }: Props) => {
       <Landing />
       <CategoryMain categories={categories} posts={posts} />
       <Top />
-      <Footer />
     </div>
   );
 };

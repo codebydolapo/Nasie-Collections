@@ -81,14 +81,14 @@ function Posts({ post }: Post) {
 
   return (
     <div className={styles.blogpost}>
-      <div className={styles.banner}>
+      {/* <div className={styles.banner}> */}
         <img
           src={urlFor(post.mainImage.asset._ref).url()}
           alt=""
           className={styles.bannerImage}
         />
         {/* <h1>Moon</h1> */}
-      </div>
+      {/* </div> */}
       <div className={styles.postBody}>
         <div className={styles.post}>
           <h1 className={styles.title}>{post.title}</h1>

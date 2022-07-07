@@ -8,7 +8,7 @@ import { sanityClient } from "C:/next-js-blog/blogr/sanity.js";
 
 
 const BlogPosts: NextPage = ({ posts }: any) => {
-  console.log(posts);
+  //console.log(posts);
   
 
   return (
