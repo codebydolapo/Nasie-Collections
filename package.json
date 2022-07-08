@@ -6,10 +6,8 @@
     "start": "next start"
   },
   "dependencies": {
-    "@sanity/image-url": "^1.0.1",
     "babel-plugin-styled-components": "^2.0.7",
     "next": "^12.1.7-canary.44",
-    "next-sanity": "^0.5.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-hook-form": "^7.33.1",
