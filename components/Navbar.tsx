@@ -9,7 +9,7 @@ import {
   ViewGridIcon,
 } from "@heroicons/react/solid";
 import {
-  lagIcon,
+  FlagIcon,
   PlayIcon,
   SearchIcon,
   ShoppingCartIcon,
@@ -19,14 +19,9 @@ function Navbar() {
   return (
     <div className={styles.navBar}>
       <div className={styles.navBarLeft}>
-        <Image
-          src="https://links.papareact.com/5me"
-          width={30}
-          height={30}
-          layout="fixed"
-        />
+        <h1>PN</h1>
         <div className={styles.inputDiv}>
-          <SearchIcon />
+          <SearchIcon className={styles.searchIcon} />
           <input
             type="text"
             className={styles.inputField}
@@ -34,7 +29,26 @@ function Navbar() {
           />
         </div>
       </div>
-      <div className={styles.navBarCenter}></div>
+      <div className={styles.navBarCenter}>
+        <div>
+          <HomeIcon className={styles.navBarCenterIcons} />
+        </div>
+        <div>
+          <FlagIcon className={styles.navBarCenterIcons} />
+        </div>
+
+        <div>
+          <PlayIcon className={styles.navBarCenterIcons} />
+        </div>
+
+        <div>
+          <ShoppingCartIcon className={styles.navBarCenterIcons} />
+        </div>
+
+        <div>
+          <UserGroupIcon className={styles.navBarCenterIcons} />
+        </div>
+      </div>
       <div className={styles.navBarRight}></div>
     </div>
   );
