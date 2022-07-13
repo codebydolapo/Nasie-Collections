@@ -1,23 +1,11 @@
-export interface Category{
-	title: string;
-}
-
-export interface Post{
-	_id:string;
-	categories: any;
-	author:{
-		image: string;
-		name:string;
-	};
-	description:string;
-	mainimage:{
-		asset: {
-			url: string;
-		}
-	};
-	slug:{
-		current: string;
-	};
-	title:string;
-	body: [object];
+export default interface Session{
+	session: {
+		user: {
+			name: string,
+			email: string,
+			image: string
+		},
+		accessToken: string,
+		expires: string
+	}
 }

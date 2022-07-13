@@ -14,8 +14,10 @@ import {
   SearchIcon,
   ShoppingCartIcon,
 } from "@heroicons/react/outline";
+import { signOut } from "next-auth/react";
 
-function Navbar() {
+
+function Navbar({session}) {
   return (
     <div className={styles.navBar}>
       <div className={styles.navBarLeft}>
@@ -49,7 +51,24 @@ function Navbar() {
           <UserGroupIcon className={styles.navBarCenterIcons} />
         </div>
       </div>
-      <div className={styles.navBarRight}></div>
+      <div className={styles.navBarRight}>
+        <p className={styles.username}>{session.user.name}</p>
+        {/* <div className={styles.rightNav}>
+          <div>
+            <ViewGridIcon className={styles.navBarRightIcons} />
+          </div>
+          <div>
+            <ChatIcon className={styles.navBarRightIcons} />
+          </div>
+          <div>
+            <BellIcon className={styles.navBarRightIcons} />
+          </div>
+          <div>
+            <ChevronDownIcon className={styles.navBarRightIcons} />
+          </div>
+        </div> */}
+        <img src = {session.user.image} alt  = '' className = {styles.profileImg} onClick= {()=>{signOut()}}/>
+      </div>
     </div>
   );
 }

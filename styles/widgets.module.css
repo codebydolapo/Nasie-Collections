@@ -1,5 +1,6 @@
 .widgets{
     height: 100%;
     width: 20%;
-    /* background: rosybrown; */
+    /* background: black; */
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
 }

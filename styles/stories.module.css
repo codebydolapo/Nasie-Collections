@@ -1,0 +1,16 @@
+.stories {
+  width: 100%;
+  max-width: 60vw;
+  height: 200px;
+  max-height: 200px;
+  /* border: 1px solid black; */
+  display: flex;
+  /* justify-content: right; */
+  align-items: center;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+
+.stories::-webkit-scrollbar {
+  display: none;
+}
