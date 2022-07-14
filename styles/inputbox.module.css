@@ -8,6 +8,8 @@
     justify-content:space-between;
     align-items: center;
     background: white;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
 }
 
 .input{
@@ -27,7 +29,7 @@
 }
 
 .input > form{
-    min-width: 70%;
+    min-width: 60%;
     width: 200px;
     height: 40px;
     margin-left: 20px;
@@ -61,6 +63,19 @@
     background: none;
 }
 
+.uploadImageDiv{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.uploadImage{
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+}
+
 .inputOptions{
     height: 40px;
     width: 100%;
@@ -79,6 +94,8 @@
     align-items: center;
     cursor: pointer;
     /* padding: 0 40px; */
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    border-radius: inherit;
 }
 
 .icon{

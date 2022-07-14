@@ -60,6 +60,7 @@ function Stories(){
         <div className = {styles.stories}>
             {stories.map((story)=>{
                 return <StoryCard
+                key = {story.name}
                 name = {story.name}
                 image = {story.src}
                 />

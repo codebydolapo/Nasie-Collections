@@ -7,5 +7,6 @@ export default interface Session{
 		},
 		accessToken: string,
 		expires: string
-	}
+	},
+	posts: any
 }
