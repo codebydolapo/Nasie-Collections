@@ -5,11 +5,11 @@ import Widgets from './Widgets'
 import Session from "C://PurpleNetwork/PurpleNetwork/types.d";
 
 
-function Mainbody({session}: Session){
+function Mainbody({session, posts}: Session){
     return (
       <div className={styles.mainBody}>
         <Sidebar session={session} />
-        <Feed session={session} />
+        <Feed session={session} posts = {posts}/>
         <Widgets />
       </div>
     );

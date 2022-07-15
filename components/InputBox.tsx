@@ -104,7 +104,7 @@ function InputBox({ session }: Session) {
             ref={inputRef}
             placeholder={`What's on your mind, ${session.user.name}?`}
           />
-          <button>Submit</button>
+          <button>Post</button>
         </form>
         {imageDisplay && (
           <div className={styles.uploadImageDiv} onClick={removeImage}>
@@ -114,7 +114,7 @@ function InputBox({ session }: Session) {
       </div>
       <div className={styles.inputOptions}>
         <div>
-          <VideoCameraIcon className={styles.icon} color={"rgb(202, 63, 63)"} />
+          <VideoCameraIcon className={styles.icon} color={"#1280ff"} />
           <p className={styles.navDescription}>Live Video</p>
         </div>
         <div
@@ -122,12 +122,12 @@ function InputBox({ session }: Session) {
             filePickerRef.current.click();
           }}
         >
-          <CameraIcon className={styles.icon} color={"tomato"} />
+          <CameraIcon className={styles.icon} color={"#1280ff"} />
           <p className={styles.navDescription}>Photo/Video</p>
           <input type="file" hidden onChange={pushImage} ref={filePickerRef} />
         </div>
         <div>
-          <EmojiHappyIcon className={styles.icon} color={"teal"} />
+          <EmojiHappyIcon className={styles.icon} color={"#1280ff"} />
           <p className={styles.navDescription}>Feeling/Activity</p>
         </div>
       </div>

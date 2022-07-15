@@ -1,9 +1,27 @@
 .mainBody{
     height: calc(100vh - 50px);
+    max-height: calc(100vh - 50px);
     width: 100vw;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     margin-top: 50px;
-    background: white;
+    background: #ffffff;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 720px){
+    .mainBody{
+    height: calc(100vh - 50px);
+    max-height: calc(100vh - 50px);
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 50px;
+    background: #ffffff;
+    object-fit: contain;
+    overflow: hidden;
+}
 }

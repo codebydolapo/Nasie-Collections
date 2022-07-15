@@ -3,9 +3,10 @@
   min-width: 120px;
   width: 120px;
   border-radius: 10px;
-  /* border: 1px solid black; */
-  margin: 0 10px;
+  border: 1px solid black;
+  margin: 0 3px;
   transition: all 500ms ease;
+  background: black;
 }
 
 .storyCard:hover{
@@ -22,4 +23,5 @@
 .storyCard > p {
   font-size: 12px;
   margin-left: 10px;
+  color: white;
 }

@@ -146,3 +146,315 @@
     border-radius: 50%;
     margin: 0 20px;
 }
+
+@media only screen and (max-width: 720px){
+
+    .navBar{
+    height: 50px;
+    width: 100vw;
+    /* background-color: rgba(85, 2, 85, 0.5); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    box-shadow: 1px 1px 10px black;
+}
+
+.navBarLeft{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    /* border: 1px solid black; */
+}
+
+.navBarLeft > h1 {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(66, 103, 178);
+    font-weight: bolder;
+}
+
+.inputDiv{
+    width: 80%;
+    border-radius: 10px;
+    height: 27px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.searchIcon{
+    width: 20px;
+    height: auto;
+    color: gray;
+    cursor: pointer;
+}
+
+.inputField{
+    width: 90%;
+    height: inherit;
+    background: 0;
+    outline: 0;
+    border: 0;
+}
+
+.navBarCenter{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navBarCenter > div{
+    width: 18%;
+    height: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid black; */
+    transition: all 100ms ease-out;
+    cursor: pointer;
+}
+
+.navBarCenter > div:hover{
+    transform: scale(1.2);
+    color: #1280ff;
+}
+
+.navBarCenter > div:active{
+    border-bottom: 3px solid #1280ff;
+}
+
+.navBarCenterIcons{
+    width: 25px;
+    height: auto;
+    color: gray;
+}
+
+.navBarRight{
+    width: 20%;
+    height: 100%;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navBarRight > p{
+    width: auto;
+    height: auto;
+    color: rgb(66, 103, 178);
+    display: none;
+    /* border: 1px solid black; */
+}
+
+/* .rightNav{
+    width: 60%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightNav > div{
+    width: 233%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 100ms ease-out;
+    /* border: 1px solid black; 
+}
+
+.rightNav > div:hover{
+    transform: scale(1.2);
+    color: #1280ff;
+}
+
+
+.navBarRightIcons{
+    width: 25px;
+    height: auto;
+    color: gray;
+} */
+
+.profileImg{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+}
+
+@media only screen and (max-width: 420px){
+
+    .navBar{
+    height: 50px;
+    width: 100vw;
+    /* background-color: rgba(85, 2, 85, 0.5); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    position: fixed;
+    box-shadow: 1px 1px 10px black;
+}
+
+.navBarLeft{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 10px;
+    /* border: 1px solid black; */
+}
+
+.navBarLeft > h1 {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(66, 103, 178);
+    font-weight: bolder;
+}
+
+.inputDiv{
+    width: 80%;
+    border-radius: 10px;
+    height: 27px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+.searchIcon{
+    width: 20px;
+    height: auto;
+    color: gray;
+    cursor: pointer;
+}
+
+.inputField{
+    width: 90%;
+    height: inherit;
+    background: 0;
+    outline: 0;
+    border: 0;
+}
+
+.navBarCenter{
+    width: 70%;
+    height: 100%;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navBarCenter > div{
+    width: 18%;
+    height: 95%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid black; */
+    transition: all 100ms ease-out;
+    cursor: pointer;
+}
+
+.navBarCenter > div:hover{
+    transform: scale(1.2);
+    color: #1280ff;
+}
+
+.navBarCenter > div:active{
+    border-bottom: 3px solid #1280ff;
+}
+
+.navBarCenterIcons{
+    width: 25px;
+    height: auto;
+    color: gray;
+}
+
+.navBarRight{
+    width: 15%;
+    height: 100%;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navBarRight > p{
+    width: auto;
+    height: auto;
+    color: rgb(66, 103, 178);
+    display: none;
+    /* border: 1px solid black; */
+}
+
+/* .rightNav{
+    width: 60%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightNav > div{
+    width: 233%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 100ms ease-out;
+    /* border: 1px solid black; 
+}
+
+.rightNav > div:hover{
+    transform: scale(1.2);
+    color: #1280ff;
+}
+
+
+.navBarRightIcons{
+    width: 25px;
+    height: auto;
+    color: gray;
+} */
+
+.profileImg{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+}

@@ -5,21 +5,10 @@ import Mainbody from "../components/Mainbody";
 import Navbar from "../components/Navbar";
 import Login from "../components/Login";
 import { getSession } from "next-auth/react";
-import Session from "C://PurpleNetwork/PurpleNetwork/types.d";
+import {Session} from "C://PurpleNetwork/PurpleNetwork/types.d";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "../components/firebase";
 
-// interface Session{
-//   session:{
-//     user: {
-//       name: string,
-//       email: string,
-//       image: string
-//     },
-//     accessToken: string,
-//     expires: string
-//   }
-// }
 
 const Home: any | NextPage = ({ session, posts }: Session) => {
   if (!session) {
@@ -47,7 +36,7 @@ export async function getServerSideProps(context: any) {
   const session = await getSession(context);
 
   //const postsRef = doc(db, "posts");
-  let posts = [];
+  let posts: Session[] | Session = [];
     await getDocs(collection(db, "posts"))
     .then((snapshot) => {
       snapshot.docs.forEach((doc) => {
