@@ -1,18 +1,14 @@
-import styles from '../styles/mainbody.module.css'
-import Sidebar from './Sidebar'
-import Feed from './Feed'
-import Widgets from './Widgets'
-import Session from "C://PurpleNetwork/PurpleNetwork/types.d";
+import styles from "../styles/mainbody.module.css";
+import Subnav from "./Subnav";
+import ProductContainer from "./ProductContainer";
 
-
-function Mainbody({session, posts}: Session){
-    return (
-      <div className={styles.mainBody}>
-        <Sidebar session={session} />
-        <Feed session={session} posts = {posts}/>
-        <Widgets />
-      </div>
-    );
+function Mainbody() {
+  return (
+    <div className={styles.mainBody}>
+      <Subnav />
+      <ProductContainer/>
+    </div>
+  );
 }
 
-export default Mainbody
+export default Mainbody;

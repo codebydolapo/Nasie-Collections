@@ -1,20 +1,24 @@
 import styles from "../styles/login.module.css";
-// import Image from 'next/image'
-import { signIn } from "next-auth/react";
+import UniversalLogo from "./UniversalLogo";
+import Link from 'next/link'
+
 
 function Login() {
+
   return (
-    <div className={styles.login}>
-      <img src="/icons/facebook.png" className={styles.facebookLogo} alt="" />
-      <h1
-        onClick={() => {
-          signIn();
-        }}
-      >
-        Login with Facebook
-      </h1>
+    <div className={styles.loginMain}>
+      <UniversalLogo />
+      <img src = '/images/banner.jpg' alt = '' className = {styles.bannerImage}/>
+      <Link href = ''>
+        <button>Proceed To Shop</button>
+      </Link>
+        <p>
+          By signing-in you agree to NASIE COLLECTIONS' Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
+        </p>
     </div>
   );
 }
+
+//By signing-in you agree to NASIE COLLECTIONS' Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
 
 export default Login;

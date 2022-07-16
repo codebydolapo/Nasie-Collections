@@ -1,0 +1,17 @@
+.subNav {
+  width: 100vw;
+  min-height: 140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow-x: scroll;
+  padding: 0 10px;
+  padding-top: 10px;
+  /* border: 1px solid black; */
+  /* border-bottom: 1px solid rgba(0, 0, 0, 1); */
+}
+
+.subNav::-webkit-scrollbar{
+    display: none;
+}

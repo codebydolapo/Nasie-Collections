@@ -1,0 +1,16 @@
+.homeMain{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    object-fit: contain;
+}
+
+.homeMain::-webkit-scrollbar{
+    display: none;
+}

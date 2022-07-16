@@ -1,32 +1,41 @@
-.login{
+.loginMain{
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: #ffca00
 }
 
-.facebookLogo{
-    height: 200px;
+.bannerImage{
+    width: 60vw;
+    height: auto;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+}
+
+.loginMain > button{
     width: 200px;
-}
-
-.login > h1{
-    font-size: 20px;
-    margin-top: 30px;
-    background: rgb(66, 103, 178);
     height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    width: 300px;
+    background: black;
     color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 500ms all ease;
     cursor: pointer;
-    transition: all 500ms ease;
 }
 
-.login > h1:hover{
-    transform: scale(1.05);
+.loginMain > button:hover{
+    transform: scale(1.05)
+}
+
+.loginMain > p{
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+    width: 400px;
+    /* border: 1px solid black; */
+    text-align: center;
 }
