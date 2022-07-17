@@ -8,6 +8,11 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    transition: ease all 200ms;
+}
+
+.categoryImage:hover{
+    transform: scale(1.1);
 }
 
 .image{

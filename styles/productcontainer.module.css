@@ -7,7 +7,7 @@
     justify-content: flex-start;
     margin-top: 0px;
     text-align: left;
-    background: coral;
+    /* background: coral; */
 }
 
 .productMainHeader{
@@ -18,8 +18,20 @@
     font-weight: 1000;
     color: black;
     text-transform: capitalize;
-    margin: 10px 0;
+    margin-top: 10px;
     padding-left: 20px;
     font-weight: 300;
+}
+
+.productCardContainer{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    /* border: 1px solid black; */
 }
 

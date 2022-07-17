@@ -9,7 +9,6 @@ function Subnav(){
         <CategoryImage image={"/images/footwear.jpg"} title = {'Footwear'}/>
         <CategoryImage image={"/images/stationery.jpg"} title = {'Stationery'}/>
         <CategoryImage image={"/images/gadgets.jpg"} title = {'Gadgets'}/>
-        <CategoryImage image={"/images/footwear.jpg"} title = {'Footwear'}/>
         <CategoryImage image={"/images/watches.png"} title = {'Watches'}/>
         <CategoryImage image={"/images/bags.png"} title = {'Bags'}/>
       </div>

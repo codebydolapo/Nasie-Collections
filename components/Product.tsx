@@ -67,10 +67,10 @@ function Product() {
         alt=""
         className={styles.productImage}
       />
-      <div className={styles.productImage}>
+      <div className={styles.productDesc}>
         <div className={styles.productName}>
           <p className={styles.mainName}>Lorem ipsum dolor</p>
-          <p className="aux-name">
+          <p className={styles.auxName}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
             rerum!
           </p>
