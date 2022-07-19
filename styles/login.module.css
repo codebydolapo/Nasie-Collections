@@ -1,0 +1,73 @@
+.loginMain{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ffca00
+}
+
+.banner{
+    width: 600px;
+    height: 230px;
+    margin-top: 100px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner > h1{
+    font-size: 170px;
+    margin-bottom: 0;
+    line-height: 150px;
+}
+
+.collections{
+    width: 80%;
+    height: 50px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collections > div {
+    width: 80%;
+    height: 25px;
+    background: black;
+}
+
+.collections > h1{
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.loginMain > button{
+    width: 200px;
+    height: 40px;
+    background: black;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: 500ms all ease;
+    cursor: pointer;
+}
+
+.loginMain > button:hover{
+    transform: scale(1.05)
+}
+
+.loginMain > p{
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    color: white;
+    width: 400px;
+    /* border: 1px solid black; */
+    text-align: center;
+}

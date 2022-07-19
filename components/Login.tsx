@@ -8,8 +8,14 @@ function Login() {
   return (
     <div className={styles.loginMain}>
       <UniversalLogo />
-      <img src = '/images/banner.jpg' alt = '' className = {styles.bannerImage}/>
-      <Link href = ''>
+      <div className = {styles.banner}>
+        <h1>NASiE</h1>
+        <div className = {styles.collections}>
+          <div></div>
+          <h1>COLLECTIONS</h1> 
+        </div>
+      </div>
+      <Link href = '/home'>
         <button>Proceed To Shop</button>
       </Link>
         <p>

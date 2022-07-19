@@ -1,9 +1,14 @@
 import styles from '../styles/navbar.module.css'
+import { useSelector } from "react-redux";
+
 
 
 
 
 function Navbar(){
+
+    const counter = useSelector((state: any | unknown) => state.productCounter)
+    const amount = useSelector((state: any | unknown) => state.productAmount)
 
     return (
       <div className={styles.navbarMain}>
@@ -16,7 +21,10 @@ function Navbar(){
         <div className={styles.navbarNavigation}>
           <div className={styles.navbarCart} onChange = {e => e.preventDefault()}>
             <p>
-              Checkout: <span>2</span>
+              Checkout: <span>{counter}</span>
+            </p>
+            <p>
+              Total: <span>#{amount}</span>
             </p>
           </div>
         </div>
