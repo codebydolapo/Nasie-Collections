@@ -12,6 +12,7 @@ export const productCounter = (state = 0, action: { type: string, amount: number
 }
 
 export const productAmount = (state = 0, action: {type: string, amount: number})=>{
+    
     switch(action.type){
         case 'INCREMENT_PRODUCT_AMOUNT':
             return state + action.amount
@@ -22,9 +23,29 @@ export const productAmount = (state = 0, action: {type: string, amount: number})
     }
 }
 
+export const category = (state = [], action: any)=>{
+    switch(action.type){
+        case 'SWITCH_CATEGORY':
+            return state = action.array
+        default:
+            return state
+    }
+}
+
+export const categoryName = (state = '', action: any)=>{
+    switch(action.type){
+        case 'SWITCH_CATEGORY_NAME':
+            return state = action.name
+        default:
+            return state
+    }
+}
+
 const allReducers = combineReducers({
     productCounter,
-    productAmount
+    productAmount,
+    category,
+    categoryName
 })
 
 export default allReducers

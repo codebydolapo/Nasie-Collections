@@ -22,3 +22,17 @@ export const decrementProductAmount = (amount: number)=>{
         amount: amount
     }
 }
+
+export const switchCategory = (array: any)=>{
+    return{
+        type: 'SWITCH_CATEGORY',
+        array: array
+    }
+}
+
+export const switchCategoryName = (name: string)=>{
+    return {
+      type: "SWITCH_CATEGORY_NAME",
+      name
+    };
+}

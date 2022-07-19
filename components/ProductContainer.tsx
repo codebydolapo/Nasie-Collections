@@ -1,25 +1,41 @@
 import styles from "../styles/productcontainer.module.css";
 import Product from "./Product";
+import { useSelector } from "react-redux";
+import {urlFor} from '../sanity'
+
+interface Category {
+  images: [{ 
+    asset: { 
+      _ref: string 
+    } 
+  }];
+  price: number;
+  title: string
+}
 
 function ProductContainer() {
 
+    const category = useSelector((state: any | unknown) => state.category);
+    const name = useSelector((state: any | unknown) => state.categoryName);
+
+    // category != [] ? console.log(category): null
+    // name != '' ? console.log(name): null
 
   return (
     <div className={styles.productContainerMain}>
-      <h1 className={styles.productMainHeader}>Category</h1>
+      <h1 className={styles.productMainHeader}>{name}</h1>
       <div className={styles.productCardContainer}>
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />  
-        <Product />  
-        <Product />  
-        <Product />  
-        <Product />  
+
+        {category && category.map((category: Category)=>{
+        return (
+          <Product
+            image={urlFor(category.images[0].asset._ref).url()}
+            price={category.price}
+            title = {category.title}
+            availability = {category.availability}
+          />
+        );
+        })}
       </div>
     </div>
   );
