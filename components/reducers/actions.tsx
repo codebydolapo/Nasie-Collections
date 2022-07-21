@@ -36,3 +36,48 @@ export const switchCategoryName = (name: string)=>{
       name
     };
 }
+
+export const addCheckoutItem = (item: {
+  image: string;
+  price: number;
+  title: string;
+  availability: boolean;
+  description: string;
+  id: number;
+}) => {
+  return {
+    type: "ADD_CHECKOUT_ITEM",
+    item,
+  };
+};
+
+export const removeCheckoutItem = (item: {id: number})=>{
+    return{
+        type: 'REMOVE_CHECKOUT_ITEM',
+        item
+    }
+}
+
+export const revealContainer = ()=>{
+    return{
+        type: 'REVEAL_CONTAINER'
+    }
+}
+
+export const removeContainer = ()=>{
+    return{
+        type: 'REMOVE_CONTAINER'
+    }
+}
+
+export const revealCheckout = ()=>{
+    return{
+        type: 'REVEAL_CHECKOUT'
+    }
+}
+
+export const removeCheckout = ()=>{
+    return{
+        type: 'REMOVE_CHECKOUT'
+    }
+}

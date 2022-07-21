@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from "../styles/home.module.css";
 import Navbar from '../components/Navbar'
 import Mainbody from '../components/Mainbody'
-import {sanityClient, urlFor} from '../sanity'
+import {sanityClient} from '../sanity'
 
 const Home: any | NextPage = ({
   watches,
@@ -16,7 +16,7 @@ const Home: any | NextPage = ({
   //{watches, gadgets, clothing, footwear, bags, stationery}
 
   // console.log(clothing);
-  console.log(watches)
+  //console.log(watches)
   // console.log(bags)
   // console.log(stationery)
   // console.log(footwear)

@@ -10,7 +10,14 @@ interface Category {
     } 
   }];
   price: number;
-  title: string
+  title: string;
+  availability: boolean,
+  description: {
+    children: {
+      text: string
+    }[]
+  }[],
+  _id: string
 }
 
 function ProductContainer() {
@@ -33,6 +40,9 @@ function ProductContainer() {
             price={category.price}
             title = {category.title}
             availability = {category.availability}
+            description = {category.description[0].children[0].text}
+            key = {category._id}
+            id = {Math.floor(Math.random() * 10000000)}
           />
         );
         })}
