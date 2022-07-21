@@ -81,3 +81,28 @@ export const removeCheckout = ()=>{
         type: 'REMOVE_CHECKOUT'
     }
 }
+
+export const removePasswordPanel = (password: number)=>{
+    return{
+        type: 'REMOVE_PASSWORD_PANEL',
+        password
+    }
+}
+
+export const revealPasswordPanel = ()=>{
+    return {
+      type: "REVEAL_PASSWORD_PANEL",
+    };
+}
+
+export const removeDashboard = ()=>{
+    return {
+      type: "REMOVE_DASHBOARD",
+    };
+}
+
+export const revealDashboard = ()=>{
+    return {
+      type: "REVEAL_DASHBOARD",
+    };
+}

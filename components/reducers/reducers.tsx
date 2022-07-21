@@ -115,6 +115,36 @@ export const checkout = (
   }
 };
 
+export const passwordState = (
+  state = true,
+  action: { type: string; password: number }
+) => {
+  switch (action.type) {
+    case "REVEAL_PASSWORD_PANEL":
+      return (state = true);
+    case "REMOVE_PASSWORD_PANEL":
+      if(action.password === 1234){
+        return (state = false);
+      }
+    default:
+      return state;
+  }
+};
+
+export const dashboardState = (
+  state = false,
+  action: { type: string; dashboardFlag: boolean }
+) => {
+  switch (action.type) {
+    case "REVEAL_DASHBOARD":
+      return (state = true);
+    case "REMOVE_DASHBOARD":
+      return (state = false);
+    default:
+      return state;
+  }
+};
+
 const allReducers = combineReducers({
   productCounter,
   productAmount,
@@ -123,6 +153,8 @@ const allReducers = combineReducers({
   checkoutItems,
   container,
   checkout,
+  passwordState,
+  dashboardState,
 });
 
 export default allReducers;
