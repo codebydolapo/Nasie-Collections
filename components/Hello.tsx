@@ -10,7 +10,7 @@ function Hello(){
     }
 
     function openDatabase(){
-        window.open("nasiecollections.sanity.studio", "_blank");
+        window.open("https://nasiecollections.sanity.studio/", "_blank");
     }
 
     return(
