@@ -52,7 +52,7 @@ export default Home;
 //footwear_ref = "01fb233d-f761-4d2b-a8f4-d42714f2bc92"
 //*[_type == 'product' && categories[0]._ref == "01fb233d-f761-4d2b-a8f4-d42714f2bc92"]
 
-export async function getServerSideProps(){
+export async function getStaticProps(){
 
   const footwear = await sanityClient.fetch(
     `*[_type == 'product' && categories[0]._ref == "01fb233d-f761-4d2b-a8f4-d42714f2bc92"]`
