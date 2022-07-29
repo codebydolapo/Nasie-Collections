@@ -56,6 +56,8 @@
     margin-top: 20px;
     transition: 500ms all ease;
     cursor: pointer;
+    border: 0;
+    outline: 0;
 }
 
 .loginMain > button:hover{
@@ -132,6 +134,8 @@
     margin-top: 20px;
     transition: 500ms all ease;
     cursor: pointer;
+    border: 0;
+    outline: 0;
 }
 
 .loginMain > button:hover{
@@ -211,6 +215,8 @@
     margin-top: 20px;
     transition: 500ms all ease;
     cursor: pointer;
+    border: 0;
+    outline: 0;
 }
 
 .loginMain > button:hover{
